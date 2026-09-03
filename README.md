@@ -1,21 +1,21 @@
+# Daraz Playwright Automation
 
-Daraz Playwright Automation
-
-Project Overview
+## Project Overview
 
 This project automates UI testing of the Daraz.pk e-commerce website using Playwright and JavaScript.
 
-The project follows the Page Object Model (POM) approach to keep the automation code organized, reusable, and maintainable.
+The project follows the Page Object Model (POM) approach to make the automation code reusable, organized, and maintainable.
 
-Technologies Used
+## Technologies Used
 
 - Playwright
 - JavaScript
 - Node.js
 - Page Object Model (POM)
 
-Project Structure
+## Project Structure
 
+```text
 daraz-playwright/
 ├── pages/
 │   └── DarazPage.js
@@ -26,64 +26,65 @@ daraz-playwright/
 ├── package-lock.json
 ├── README.md
 └── .gitignore
+```
 
-File Description
+## File Description
 
-File| Description
-"DarazPage.js"| Contains Daraz page locators and reusable automation methods
-"example.spec.js"| Contains the Playwright test scenarios
-"playwright.config.js"| Contains Playwright test configuration
-"package.json"| Contains project dependencies and scripts
-"package-lock.json"| Records the installed dependency versions
-"README.md"| Project documentation
-".gitignore"| Specifies files that should not be uploaded to GitHub
+| File | Description |
+|---|---|
+| DarazPage.js | Contains Daraz page locators and reusable automation methods |
+| example.spec.js | Contains the main Playwright test scenario |
+| playwright.config.js | Playwright test configuration |
+| package.json | Project dependencies and scripts |
+| package-lock.json | Records installed dependency versions |
+| README.md | Project documentation |
+| .gitignore | Specifies files that should not be uploaded to GitHub |
 
-Automated Test Scenario
+## Automated Test Scenario
 
 The automation performs the following steps:
 
 1. Open Daraz.pk
-2. Search for a product/category
-3. Apply the required brand filter
-4. Apply the required price filter
-5. Validate the displayed products
+2. Search for Electronics
+3. Apply the Brand filter
+4. Apply the Price Range filter from 500 PKR to 5000 PKR
+5. Validate the product count
 6. Open the first available product
 7. Verify the product details page
 8. Check whether Free Shipping is available
 
-Page Object Model
+## Page Object Model
 
 The project uses the Page Object Model (POM) design pattern.
 
-The "DarazPage" class contains reusable methods for:
+The DarazPage class contains reusable methods for:
 
 - Website navigation
 - Product searching
-- Applying filters
-- Validating product results
+- Brand filtering
+- Price filtering
+- Product counting
 - Opening product details
-- Verifying Free Shipping
+- Free Shipping verification
 
-Installation
-
-Install the project dependencies:
+## Installation
 
 npm install
 
-Install Playwright browsers:
-
 npx playwright install
 
-Running the Tests
-
-To run the tests on Chromium:
+## Running the Tests
 
 npx playwright test --project=chromium
 
-Expected Result
+## Expected Result
 
-The test should successfully navigate through the Daraz shopping flow, perform the required search and filtering actions, validate the available products, open a product details page, and check the Free Shipping status.
+The test should successfully navigate through the Daraz shopping flow, apply the required filters, validate available products, open a product details page, and check the Free Shipping status.
 
-Note
+## Note
 
-Daraz.pk is a live e-commerce website, so product availability, filters, shipping information, and page elements may change over time.
+Daraz.pk is a live website, so product availability, filters, shipping information, and page elements may change over time.
+
+## Author
+
+- ZANIB ASLAM
